@@ -15,6 +15,8 @@ De instructie vind je in: [INSTRUCTIONS.md](https://github.com/fdnd-task/fix-the
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? -->
 
 ## Bronnen
+https://www.javascripttutorial.net/javascript-dom/javascript-toggle-password-visibility/
+https://codepen.io/roelmagdaleno/pen/eYjzraV
 
 ## Licentie
 
