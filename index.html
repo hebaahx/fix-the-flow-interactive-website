@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>your groups</title>
+    <link rel="stylesheet" href="https://hebaahx.github.io/look-and-feel-styleguide/styleguide-snappthis.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+ <!--  Header -->
+ <header class="header">
+    <h1 class="header-title">Your groups</h1>
+    <a href="#" class="add">
+      <img src="assets/add.svg" alt="add new group">
+    </a>
+ </header>
+    
+  <!-- group list -->
+<main>
+
+  <section class="popup-menu" id="popupmenu">
+    <ul>
+      <li class="popup-item">
+        <input type="checkbox" id="memberscanadd">
+        <label for="memberscanadd">Members can add snapp from roll</label>
+      </li>
+
+      <li class="popup-item upload-field">
+        <label for="snappupload">upload</label>
+        <input type="file" id="snappupload" accept="image/*">
+      </li>
+
+      <li class="popup-item leave">
+        <img src="assets/leave.svg" alt="leave this group">
+        <span>Leave this group</span>
+      </li>
+
+      <li class="popup-item delete">
+        <img src="assets/delete.svg" alt="delete this group">
+        <span>Delete this group</span>
+      </li>
+    </ul>
+  </section>
+
+    <ul class="groups">
+
+      <li class="group">
+        <p class="group-name">Westerpark</p>
+        <button class="group-sub clickable" onclick="openMenu()">Add your snapp! </button>
+      </li>
+
+      <li class="group">
+        <p class="group-name">Psychology 2a</p>
+        <p class="group-sub">32 members</p>
+      </li>
+
+      <li class="group">
+        <p class="group-name">Psychology 2b</p>
+        <p class="group-sub">55 members</p>
+      </li>
+
+    </ul>
+</main>
+
+  <!-- nav bar -->
+   <nav class="nav-bar">
+    <ul>
+      <li class="nav-item">
+        <a href="#">
+         <img src="assets/logo.svg" alt="home page">
+        </a>
+     </li>
+
+      <li class="nav-item">
+        <a href="#">
+         <img src="assets/search.svg" alt="search content">
+        </a>
+      </li>
+
+      <li class="nav-item active">
+        <a href="#">
+         <img src="assets/group.svg" alt="your groups">
+        </a>
+      </li>
+
+      <li class="nav-item">
+       <a href="password.html" class="nav-item">
+        <img src="assets/user.svg" alt="your profile">
+       </a>
+     </li>
+    </ul>
+   </nav>
+
+ <script src="index.js"></script>
+</body>
+</html>
