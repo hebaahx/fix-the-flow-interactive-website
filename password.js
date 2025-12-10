@@ -1,31 +1,32 @@
-// stap 1 - document.querySelector
-// zoek en selecteer de button die je wilt veranderen
-const viewPassword =
-document.querySelector('.toggle-btn')
+// Stap 1 - document.querySelector, Alle buttons selecteren
+const toggleButtons = document.querySelectorAll('.toggle-btn')
 
-// stap 2 - addEventListener
-// wachten tot er op wordt geklikt
-viewPassword.addEventListener('click', function() {
+// Stap 2 - voor elke buton een event listener toevoegen
+toggleButtons.forEach(function(viewPassword) {
+  viewPassword.addEventListener('click', function() {  
 
-// stap 3 - selecteer inputveld en svg
-const passwordField = document.querySelector('#current-password')
+// Stap 3 - Selecteer het inputveld via data input attribuut
+const inputId = viewPassword.getAttribute('data-input')
+const passwordField = document.querySelector('#' + inputId) //zo selecteer ik de inputvelden
+
+// Selecteer het svg (img) in de button
 const icon = viewPassword.querySelector('img')
 
-//check of het veld nu password is
+//Check of het veld nu password is
 if(passwordField.type == 'password') { // als het veld password is
-    //maak tekst zichtbaar
+    //Maak tekst zichtbaar
     passwordField.type = 'text'
-    //verander svg naar oog met streepje er doorheen
+    //Verander svg naar oog met streepje er doorheen
     icon.src = 'assets/hideeye.svg' 
 }
-//als het niet zo is
+//Als het niet zo is
 else {
-    //maak tekst weer verborgen
+    //Maak tekst weer verborgen
     passwordField.type = 'password'
-    //verander svg naar open oog
+    //Verander svg naar open oog
     icon.src = 'assets/vieweye.svg'
 }
 
-}
-)
+})
 
+})
