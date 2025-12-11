@@ -70,7 +70,7 @@ main {
 
  .group-sub {
   font-size: 1.2rem;
- color: var(--add-action);
+  color: var(--add-action);
   margin: 0;
   }
 
@@ -117,50 +117,5 @@ main {
      justify-content: center;
      align-items: center;
      padding: 0.5rem;
-    }
-}
-/* POPUP MENU */
-.popup-menu {
-    position: fixed;
-    right: -500px; /* begint buiten beeld */
-    top: 80px;
-    width: 300px;
-    background-color: var(--grey-background);
-    box-shadow: -3px 0 10px black;
-    transition: 0.4s ease;
-    padding: 1rem;
-    border-radius: 8px;
-
-     @media (min-width: 700px) {
-        top: 100px;
-        width: 300px;
-        padding: 2rem;
-     }
-
-    &.open {
-    right: 0; /* schuift in beeld */
-    }   
-
-    ul {
-    margin: 0;
-    padding: 0;
-    }
-
-    
-    .popup-item {
-     display: flex;
-     align-items: center;
-     padding: 0.6rem;
-     font-size: 1rem;
-     color: var(--primary-color);
-    }
-
-     img {
-      width: 20px;
-      margin-right: 10px;
-    }
-
-    .delete span {
-    color: red;
     }
 }
