@@ -6,8 +6,7 @@ body{
 header{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
+    padding: 0.4rem;
     background-color: var(--primary-color);
     color: var(--white);
 }
@@ -24,6 +23,22 @@ header{
       aspect-ratio: 1/1; /* maakt foto vierkant */
       border-radius: 5px; 
      }
+   }
+
+   .nav-bar {
+    position: fixed;
+    bottom:0;
+    width: 100%;
+    
+     
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-item a {
+     padding: 0.5rem;
+    }
    }
 
    .footer{
