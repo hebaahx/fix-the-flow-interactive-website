@@ -38,17 +38,48 @@ else {
 
 
 // Stap 1 - Formulier selecteren
+const form = document.querySelector('.password-form')
 
 
 // Stap 2 - Event listener toevoegen op submit
+form.addEventListener('submit', function(e){
+ e.preventDefault() // voorkomt dat formulier direct verzendt
 
 
 // Stap 3 - Inputwaarden ophalen
+const newPassword = document.querySelector('#new-password').value
+const repeatPassword = document.querySelector('#new-password-repeat').value
 
 //  Foutmeldingen selecteren
+const newPasswordError = document.querySelector('#new-password-error')
+const repeatPasswordError = document.querySelector('#repeat-password-error')
 
 // Wachtwoord moet voelden aan: minimaal 8 tekens, 1 cijfer, 1 speciaal teken
+const passwordRegex =  /^(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
 
 // Stap 3a - Check new password
+if(!passwordRegex.test(newPassword)) {
+   newPasswordError.textContent = "Password must be at least 8 characters, include a number and a special character.";
+   return; // stop submit
+}
+else {
+   newPasswordError.textContent = ""; // geen fout
+}
 
 // Stap 3b - Check of passwords overeenkomen
+
+if(newPassword !== repeatPassword) {
+  repeatPasswordError.textContent = "Passwords do not match.";
+  return; // stop submit
+}
+
+else {
+  repeatPasswordError.textContent = ""; // geen fout
+}
+
+//Als alles klopt :)
+alert("Password changed successfully!");
+  form.submit()
+
+})
+
