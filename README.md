@@ -31,8 +31,8 @@ Mijn UI-ontwerpkeuze is een password toggle waarmee gebruikers hun wachtwoord ku
   
 ### screenshot
 
-![Password toggle interactie](assets/password-hide.png)
-![Password toggle interactie](assets/password-view.png)
+<img src="assets/password-hidden.png" width="300">
+<img src="assets/password-visible.png" width="300">
 
 ### Toegankelijkheid
 - De password toggle is bereikbaar via het toetsenbord (tab-navigatie).
