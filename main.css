@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    background-color: var(--grey-background)
+    background-color: var(--grey-background);
 }
 
 header{
@@ -22,6 +22,7 @@ header{
       width: 100%; 
       aspect-ratio: 1/1; /* maakt foto vierkant */
       border-radius: 5px; 
+
      }
    }
 
@@ -30,17 +31,22 @@ header{
     bottom:0;
     width: 100%;
     
-     
     ul {
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: space-around;
     }
 
-    .nav-item a {
+    a {
      padding: 0.5rem;
     }
    }
 
    .footer{
     display: none;
+    
+    @media (min-width: 800px){
+      display: block;
+    }
    }
