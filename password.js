@@ -1,3 +1,6 @@
+//  Password change  //
+
+
 // Stap 1 - document.querySelector, Alle buttons selecteren
 const toggleButtons = document.querySelectorAll('.toggle-btn')
 
@@ -29,3 +32,23 @@ else {
 
 })
 })
+
+
+//  Password security check  //
+
+
+// Stap 1 - Formulier selecteren
+
+
+// Stap 2 - Event listener toevoegen op submit
+
+
+// Stap 3 - Inputwaarden ophalen
+
+//  Foutmeldingen selecteren
+
+// Wachtwoord moet voelden aan: minimaal 8 tekens, 1 cijfer, 1 speciaal teken
+
+// Stap 3a - Check new password
+
+// Stap 3b - Check of passwords overeenkomen
