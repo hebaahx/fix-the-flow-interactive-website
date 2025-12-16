@@ -97,25 +97,27 @@ main {
 }
 
 
-
 /* Nav-bar */
 .nav-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: var(--primary-color);
     
+   
     ul {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
       margin: 0;
       padding: 0;
+
+      img {
+        width: 32px;
+        height: 45px;    
+      }
     }
 
     .nav-item a {
-     display: flex;
-     justify-content: center;
-     align-items: center;
      padding: 0.5rem;
     }
 }

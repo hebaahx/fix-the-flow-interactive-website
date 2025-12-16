@@ -10,13 +10,13 @@ toggleButtons.forEach(function(viewPassword) {
 
 // Stap 3 - Selecteer het inputveld via data input attribuut
 const inputId = viewPassword.getAttribute('data-input')
-const passwordField = document.querySelector('#' + inputId) //zo selecteer ik de inputvelden
+const passwordField = document.querySelector('#' + inputId) //zo selecteer ik de inputvelden 
 
 // Selecteer het svg (img) in de button
 const icon = viewPassword.querySelector('img')
 
 //Check of het veld nu password is
-if(passwordField.type == 'password') { // als het veld password is
+if(passwordField.type === 'password') { // als het veld password is
     //Maak tekst zichtbaar
     passwordField.type = 'text'
     //Verander svg naar oog met streepje er doorheen
@@ -72,7 +72,7 @@ repeatPasswordError.textContent = ""
 
 
 // Stap 3a - Check new password
-if(!passwordRegex.test(newPassword)) {
+if(!passwordRegex.test(newPassword)) { // als wachtwoorden niet hetzslfde zijn
    newPasswordError.textContent = "Password must be at least 8 characters, include a number and a special character.";
    newPasswordInput.classList.add('input-error')
    return; // stop submit

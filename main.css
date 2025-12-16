@@ -26,22 +26,31 @@ header{
      }
    }
 
-   .nav-bar {
+   /* Nav-bar */
+.nav-bar {
     position: fixed;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     
+   
     ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      align-items: center;
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: space-around;
+
+      img {
+        width: 32px;
+        height: 45px;    
+      }
     }
 
-    a {
+    .nav-item a {
      padding: 0.5rem;
     }
-   }
+}
+
 
    .footer{
     display: none;
