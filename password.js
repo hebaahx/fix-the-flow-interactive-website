@@ -47,19 +47,34 @@ form.addEventListener('submit', function(e){
 
 
 // Stap 3 - Inputwaarden ophalen
-const newPassword = document.querySelector('#new-password').value
-const repeatPassword = document.querySelector('#new-password-repeat').value
 
-//  Foutmeldingen selecteren
+//Begin weer bij stap 1: input elementen selecteren
+const newPasswordInput = document.querySelector('#new-password')
+const repeatPasswordInput = document.querySelector('#new-password-repeat')
+
+// Stap 2: waarden ophalen
+const newPassword = newPasswordInput.value
+const repeatPassword = repeatPasswordInput.value
+
+//Stap 3: Foutmeldingen selecteren
 const newPasswordError = document.querySelector('#new-password-error')
 const repeatPasswordError = document.querySelector('#repeat-password-error')
 
 // Wachtwoord moet voelden aan: minimaal 8 tekens, 1 cijfer, 1 speciaal teken
 const passwordRegex =  /^(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}$/;
 
+// De errors restten als die zijn geweest
+newPasswordInput.classList.remove('input-error')
+repeatPasswordInput.classList.remove('input-error')
+newPasswordError.textContent = ""
+repeatPasswordError.textContent = ""
+
+
+
 // Stap 3a - Check new password
 if(!passwordRegex.test(newPassword)) {
    newPasswordError.textContent = "Password must be at least 8 characters, include a number and a special character.";
+   newPasswordInput.classList.add('input-error')
    return; // stop submit
 }
 else {
@@ -70,6 +85,7 @@ else {
 
 if(newPassword !== repeatPassword) {
   repeatPasswordError.textContent = "Passwords do not match.";
+  repeatPasswordInput.classList.add('input-error') //rode border toevoegen bij foutmelding
   return; // stop submit
 }
 
