@@ -13,15 +13,22 @@ De gebruiker kan hier drie wachtwoordvelden invullen:
 - Current password
 - New password
 - Confirm new password
+Verder heb ik gewerkt aan de password security validation gewerkt, dit is belangrijk omdat een password aan bepaalde eisen moet voldoen.
+-Het wachtwoord moet minimaal 8 karakters zijn, een nummer bevatten en een speciaal karakter (bijv. !@#$%^&)
 
 Door op een icoon te klikken kan de gebruiker het wachtwoord tonen of verbergen.
 Dit maakt het invullen overzichtelijker en helpt om typfouten te voorkomen.
 
-### UI-ontwerpkeuze
+## UI-ontwerpkeuze
 Mijn UI-ontwerpkeuze is een password toggle waarmee gebruikers hun wachtwoord kunnen bekijken en weer verbergen. Dit maakt het invullen makkelijker voor de gebruiker en voorkomt fouten. De uitwerking hiervan is terug te zien in mijn GitHub commits en in de HTML, CSS en JavaScript die ik heb gebruikt.
 
+### Wireflow
+Password toggle:
+  <img width="500" height="500" alt="525090818-66af27fe-0ab1-497a-9e72-835da03c53f2" src="https://github.com/user-attachments/assets/a5c94b53-beb5-44d3-93af-b5a66e828f1d" />
+  
 #### User Story
 * As a student, I want to toggle the visibility of content so that I can choose when I can see or hide certain information.
+* As a student I want my password to meet security requirments (numbers and special characters) so that the account is protected from unauthorized access.
 
 #### Wat je met dit project kan: 
 * Wachtwoorden zichtbaar maken
@@ -29,6 +36,7 @@ Mijn UI-ontwerpkeuze is een password toggle waarmee gebruikers hun wachtwoord ku
 * Directe visuele feedback krijgen via een icoon
 * Veilig controleren wat je hebt ingevoerd
   
+
 ### screenshot
 
 <img src="assets/password-hide.png" width="300">
@@ -71,6 +79,13 @@ In deze stap:
 - Wissel ik het inputtype tussen password en text
 - Verander ik het icoon zodat de gebruiker visuele feedback krijgt
 - Zo weet de gebruiker altijd of het wachtwoord zichtbaar of verborgen is.
+
+  
+### De password security validation controleert of:
+- Het wachtwoord minimaal 8 karakters bevat
+- Er een cijfer aanwezig is
+- Er een speciaal karakter aanwezig is
+ De gebruiker krijgt directe feedback, zodat duidelijk is of het wachtwoord sterk genoeg is voordat het formulier wordt verzonden.
 
 ## Bronnen
 - https://www.javascripttutorial.net/javascript-dom/javascript-toggle-password-visibility/
